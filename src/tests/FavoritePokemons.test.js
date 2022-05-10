@@ -15,7 +15,7 @@ test('Teste o componente Favorite Pokemons', () => {
   userEvent.click(details);
   const label = screen.getByLabelText(/pokémon favoritado/i);
   userEvent.click(label);
-  // const inputFavorite = screen.getbyRole('button', { checked: true });
+
   history.push('/favorites');
   const favorite = screen.getByText(/pikachu/i);
   expect(favorite).toBeInTheDocument();
